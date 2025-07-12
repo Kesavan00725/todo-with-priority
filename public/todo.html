@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priority Todo List</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="todo-container">
+    <div class="todo-header">
+      <h1 class="todo-title">Todo List with Priority</h1>
+      <p class="todo-subtitle">Organize your tasks by priority</p>
+    </div>
+
+    <div class="todo-form">
+      <div class="form-group">
+        <input type="text" id="todoInput" placeholder="Add a new task..." class="todo-input">
+        <select id="prioritySelect" class="priority-select">
+          <option value="high">🔴 High Priority</option>
+          <option value="medium" selected>🟡 Medium Priority</option>
+          <option value="low">🟢 Low Priority</option>
+        </select>
+        <button id="addBtn" class="add-btn">
+          <span>+</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="todo-stats">
+      <div class="stat-item">
+        <span class="stat-number" id="totalTasks">0</span>
+        <span class="stat-label">Total</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="completedTasks">0</span>
+        <span class="stat-label">Completed</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="pendingTasks">0</span>
+        <span class="stat-label">Pending</span>
+      </div>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All Tasks</button>
+      <button class="filter-btn" data-filter="high">High Priority</button>
+      <button class="filter-btn" data-filter="medium">Medium Priority</button>
+      <button class="filter-btn" data-filter="low">Low Priority</button>
+    </div>
+
+    <div class="todo-list" id="todoList">
+      <!-- Todos will be dynamically inserted here -->
+    </div>
+
+    <div class="empty-state" id="emptyState">
+      <div class="empty-icon">📝</div>
+      <h3>No tasks yet</h3>
+      <p>Add your first task to get started!</p>
+    </div>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
