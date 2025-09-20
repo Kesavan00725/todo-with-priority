@@ -1,5 +1,4 @@
-
-    :root {
+:root {
     
       --background: 0 0% 100%;
       --foreground: 222.2 84% 4.9%;
@@ -390,6 +389,115 @@
       font-size: 1rem;
     }
 
+    /* Style for the deadline (calendar) input */
+.deadline-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-size: 1rem;
+  min-width: 180px;
+  transition: var(--transition-smooth);
+}
+
+.deadline-input:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+}
+
+/* Style for disabled deadline input in todo list */
+.todo-meta input[type="datetime-local"] {
+  font-size: 0.95em;
+  border: none;
+  background: transparent;
+  color: hsl(var(--foreground));
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  width: 180px;
+}
+
+/* History section styles */
+.history-btn {
+  margin: 1.5rem 0 0 0;
+  background: hsl(var(--priority-medium));
+  color: hsl(var(--priority-medium-foreground));
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 2px 8px hsl(var(--priority-medium) / 0.08);
+}
+
+.history-btn:hover {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.todo-history {
+  background: hsl(var(--muted));
+  border-radius: 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 12px hsl(var(--muted-foreground) / 0.08);
+  border: 1px solid hsl(var(--border));
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideIn 0.3s;
+}
+
+.todo-history h3 {
+  margin-top: 0;
+  color: hsl(var(--foreground));
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+#historyList {
+  max-height: 220px;
+  overflow-y: auto;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#historyList li {
+  margin-bottom: 1.1rem;
+  font-size: 1rem;
+  color: hsl(var(--foreground));
+  background: hsl(var(--card));
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 1px 4px hsl(var(--muted-foreground) / 0.04);
+  list-style: disc inside;
+}
+
+#closeHistoryBtn {
+  display: block;
+  margin: 0 auto;
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+#closeHistoryBtn:hover {
+  background: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
     @keyframes slideIn {
       from {
         opacity: 0;
@@ -423,4 +531,3 @@
         min-width: 0;
       }
     }
-  

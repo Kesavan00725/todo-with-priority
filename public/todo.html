@@ -21,6 +21,8 @@
           <option value="medium" selected>🟡 Medium Priority</option>
           <option value="low">🟢 Low Priority</option>
         </select>
+        <!-- Added deadline input -->
+        <input type="datetime-local" id="deadlineInput" class="deadline-input" placeholder="Deadline" />
         <button id="addBtn" class="add-btn">
           <span>+</span>
         </button>
@@ -58,9 +60,16 @@
       <h3>No tasks yet</h3>
       <p>Add your first task to get started!</p>
     </div>
+
+    <!-- History section -->
+    <button id="viewHistoryBtn" class="history-btn">View History</button>
+    <div class="todo-history" id="todoHistory" style="display:none;">
+      <h3>Task History</h3>
+      <ul id="historyList"></ul>
+      <button id="closeHistoryBtn">Close</button>
+    </div>
   </div>
 
-  <script src="script.js">
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
